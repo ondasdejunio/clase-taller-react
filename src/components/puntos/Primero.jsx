@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import CardTitle from './common/CardTitle'
-import Input from './common/Input'
-import Button from './common/Button'
+import Input from '../common/Input'
+import Button from '../common/Button'
+import Card from '../common/Card'
 
 export default function Primero() {
     const [value, setValue] = useState("")
@@ -29,11 +29,10 @@ export default function Primero() {
     }
 
   return (
-    <div>
-        <CardTitle value={"Calculadora de Tiempo"}/>
+    <Card title={"1) Calculadora de Segundos"} description={"Digita la cantidad de segundos que desees y mira la magia."}>
         <Input value={value} label="Número de segundos" placeholder="Ingresa la cantidad de segundos" type="number" min={"0"} onChange={onChangeInput}/>
         <Input readonly value={calculatedValue} label="Resultado" type="text"/>
         <Button label="Presióname para calcular" onClick={onClickButton}/>
-    </div>
+    </Card>
   )
 }

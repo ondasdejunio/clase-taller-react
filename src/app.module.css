@@ -1,0 +1,38 @@
+.body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Oswald', sans-serif;
+}
+
+.title {
+  margin: 0;
+  font-size: 50px;
+  color: white;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.container {
+  padding: 50px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+ol {
+  list-style: disc;
+}

@@ -1,0 +1,28 @@
+.card {
+    background-color: #ffeec0;
+    box-shadow: 5px 5px black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.cardHeader {
+    padding-left: 10px;
+    height: fit-content;
+    background-color: #fe8f70;
+    color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    border-bottom: 1px solid black
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.cardContent {
+    padding: 0px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,17 +1,18 @@
-import Primero from './components/Primero';
+import { Components } from "./components/Components";
+import styles from "./app.module.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Taller</h1>
-        <h3>Jose Martínez</h3>
+    <div className={styles.body}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>Taller JavaScript</h1>
+        <h3 className={styles.subtitle}>Jose Manuel Martínez</h3>
       </header>
-      <div>
-        <Primero/>
+      <div className={styles.container}>
+        <Components/>
       </div>
     </div>
   );
 }
 
-export default App;
+export default App

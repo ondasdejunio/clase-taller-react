@@ -1,14 +1,15 @@
 import { React, useRef } from 'react'
 import PropTypes from 'prop-types'
+import styles from './input.module.css'
 
 export default function Input(props) {
     const { readonly, min, value, label, placeholder, type, onChange } = props
     const id = useRef(`input-${Math.random()}`)
 
   return (
-      <div className=''>
-        <label htmlFor={id.current}>{label}</label>
-        <input readOnly={readonly} id={id.current} type={type} min={min} value={value} placeholder={placeholder} onChange={(e) => onChange && onChange(e)} />
+      <div className={styles.container}>
+        <label className={styles.label} htmlFor={id.current}>{label}</label>
+        <input className={styles.input} readOnly={readonly} id={id.current} type={type} min={min} value={value} placeholder={placeholder} onChange={(e) => onChange && onChange(e)} />
       </div>
   )
 }

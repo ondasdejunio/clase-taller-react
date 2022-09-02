@@ -1,0 +1,16 @@
+.button {
+    margin-top: 5px;
+    padding: 5px;
+    align-self: flex-end;
+    background-color: #c8d2ff;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.button:hover{
+    background-color: #b6c3fb;
+}
+
+.button:active{
+    background-color: #9dacf3;
+}

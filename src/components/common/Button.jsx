@@ -1,12 +1,13 @@
 import { React, useRef } from 'react'
 import PropTypes from 'prop-types'
+import styles from './button.module.css'
 
 export default function Button(props) {
     const { label, onClick } = props
     const id = useRef(`button-${Math.random()}`)
 
   return (
-      <button id={id.current} onClick={(e) => onClick && onClick()}>{label}</button>
+      <button className={styles.button} id={id.current} onClick={(e) => onClick && onClick()}>{label}</button>
   )
 }
 
