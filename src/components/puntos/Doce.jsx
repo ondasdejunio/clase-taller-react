@@ -50,7 +50,7 @@ export default function Doce() {
             }
 
             <Button label="Presióname para calcular" onClick={onClickButton} />
-            <Message>
+            <Message hide={results.length === 0}>
                 {
                 results.map((result, i) => {
                     return <p key={i}>{result}</p>

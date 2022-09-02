@@ -26,7 +26,7 @@ export default function Cuarto() {
         <Input value={numberOne} label="Número 1" type="number" onChange={(e) => setNumberOne(Number(e.target.value))}/>
         <Input value={numberTwo} label="Número 2" type="number" onChange={(e) => setNumberTwo(Number(e.target.value))}/>
         <Input value={numberThree} label="Número 3" type="number" onChange={(e) => setNumberThree(Number(e.target.value))}/>
-        <Message>{value}</Message>
+        <Message hide={value === ""}>{value}</Message>
         <Button label="Presióname" onClick={onClickButton}/>
     </Card>
   )

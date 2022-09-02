@@ -3,6 +3,7 @@ import Input from '../common/Input'
 import Button from '../common/Button'
 import Card from '../common/Card'
 import Message from '../common/Message'
+import List from '../common/List'
 
 export default function Sexto() {
     const [value, setValue] = useState("")
@@ -22,13 +23,8 @@ export default function Sexto() {
     <Card title={"6) Calculador de números impares"} description={"Pon un número y te calculo los números impares menores a este."}>
         <Input value={value} label="Inserta tu número" min={"0"} type="number" onChange={(e) => setValue(Number(e.target.value))}/>
         <Button label="Presióname" onClick={onClickButton}/>
-        <Message>
-            <h3>Los números son:</h3>
-            <ol>
-                {
-                    arrayNumbers.map((number, i) => <li key={i}>{number}</li>)
-                }
-            </ol>
+        <Message hide={arrayNumbers.length === 0}>
+            <List title={"Números impares"} arrayItems={arrayNumbers} />
         </Message>
     </Card>
   )

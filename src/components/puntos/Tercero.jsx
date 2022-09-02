@@ -31,7 +31,7 @@ export default function Tercero() {
         <Input value={name} label="Escribe tu nombre" placeholder="Isabella Castillo" type="text" onChange={(e) => setName(e.target.value)}/>
         <Input value={hours} label="Digita la hora" placeholder="4:00" type="time" onChange={(e) => setHours(e.target.value)}/>
         <Button label="Saludar" onClick={onClickButton}/>
-        <Message>{message}</Message>
+        <Message hide={message === ""}>{message}</Message>
     </Card>
   )
 }

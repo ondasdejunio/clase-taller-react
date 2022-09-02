@@ -42,8 +42,8 @@ export default function Once() {
         <Input value={grades[1]} label="Nota 2" placeholder="Pon tu nota no. 2" type="number" onChange={(e)=>setGrades([grades[0], Number(e.target.value), grades[2]])}/>
         <Input value={grades[2]} label="Nota 3" placeholder="Pon tu nota no. 3" type="number" onChange={(e)=>setGrades([grades[0], grades[1], Number(e.target.value)])}/>
         <Button label="Presióname para calcular" onClick={onClickButton}/>
-        <Message>
-            <p>{showMessage && message }</p>
+        <Message hide={!showMessage}>
+            {<p>{message}</p>}
         </Message>
         </Card>
   )

@@ -31,12 +31,15 @@ export default function Octavo() {
     <Card title={"8) Valores aleatorios"} description={"Digita la posición del arreglo que deseas ver y conócela."}>
         <Input value={valuePosition} label="Posición del arreglo" placeholder="Digita la posición del arreglo" type="number" onChange={(e)=>setValuePosition(Number(e.target.value))}/>
         <Button label="Presióname para calcular" onClick={onClickButton}/>
-        <Message>
-            {
-                error ? <h3 style={{color:"red", margin:"0px", fontWeight:"600", fontSize:"13px"}}>Debes digitar un número entre 0 y 9.</h3> : <p>La opción seleccionada es: {numberValue}</p>
-            }
-            
-        </Message>
+        {
+                error ? 
+                <h3 style={{color:"red", margin:"0px", fontWeight:"600", fontSize:"13px"}}>Debes digitar un número entre 0 y 9.</h3> 
+                : <Message hide={numberValue === ""}>
+                    {
+                        numberValue ? <p>El número en la posición {valuePosition} es: {numberValue}</p> : ""
+                    }
+                </Message>
+        }
     </Card>
   )
 }

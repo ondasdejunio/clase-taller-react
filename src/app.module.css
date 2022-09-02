@@ -1,11 +1,14 @@
 .body {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .header {
-  margin: 50px;
+  position: static;
+  top: 50px;
+  left: 100px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   font-family: 'Oswald', sans-serif;
@@ -26,13 +29,11 @@
 }
 
 .container {
+  width: 40%;
+  margin: 50px;
   padding: 50px;
   background-color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-ol {
-  list-style: disc;
 }

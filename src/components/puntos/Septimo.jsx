@@ -4,6 +4,7 @@ import Button from '../common/Button'
 import Card from '../common/Card'
 import Message from '../common/Message'
 import Switch from '../common/Switch'
+import List from '../common/List'
 
 export default function Septimo() {
     const [value, setValue] = useState("")
@@ -42,7 +43,7 @@ export default function Septimo() {
         {
             !conditionLength ? 
             <div style={{display:"flex", flexDirection:"column"}}>
-                <Message>{`Faltan ${10 - array.length} para obtener la cantidad de salarios`}</Message>
+                <Message>{`Faltan ${10 - array.length} registros para obtener la cantidad de salarios`}</Message>
                 <Input value={value} label={`Salario no. ${array.length + 1}`} min={"0"} type="number" onChange={(e) => setValue(Number(e.target.value))}/>
                 <Button label="Insertar" onClick={onClickButton}/>
             </div>
@@ -52,13 +53,8 @@ export default function Septimo() {
             </div>
         }
         
-        <Message>
-            <h3>Salarios registrados:</h3>
-            <ol>
-                {
-                    array.map((number, i) => <li key={i}>{number}</li>)
-                }
-            </ol>
+        <Message hide={array.length === 0}>
+            <List title={"Salarios registrados"} arrayItems={array} />
         </Message>
     </Card>
   )
